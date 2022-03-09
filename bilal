@@ -1,0 +1,49 @@
+@model IEnumerable<StudentFollow1.ViewModel.studentViewModel1>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kayıtlı Ögrenciler</h2>
+<table class="table table-light table-hover">
+    <thead>
+        <tr>
+            <th>Resim</th>
+            <th>T.C Kimlik No</th>
+            <th>Adı</th>
+            <th>Soyadı</th>
+            <th>Cinsiyet</th>
+            <th>Sınıfı</th>
+            <th>Güncelle | Sil</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><img src="~/Image/@item.ImagePath" /></td>
+                <td>
+                    @Html.DisplayFor(model => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.ClasName)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Sil", "Details", "Home")
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
