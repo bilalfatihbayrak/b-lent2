@@ -1,0 +1,55 @@
+.logo{
+    width: 150px;
+}
+
+
+.sagahizalama{
+text-align: right;    
+}
+
+.sagahizalama a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.sagahizalama a:hover{
+    color: #ff0000;
+}
+
+.product{
+    margin-top: 20px;
+}
+
+.product .row{
+   padding: 10px 0;
+}
+
+.box{
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+.box img{
+ width: 120px;
+ height: 150px;
+}
+
+.box-bottom{
+    display: flex;
+    justify-content: space-around;
+}
+.fb{
+font-weight: bold;
+}
+
+
+.footer{
+    background-color: gainsboro;
+    margin-top: 20px;
+    padding: 50px 50px;
+}
+
+
+
